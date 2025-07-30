@@ -1,0 +1,51 @@
+{
+	"info": {
+		"name": "RequestsAPI - Sistema de Pedidos",
+		"description": "Collection para testar os endpoints da API de pedidos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Valor Total do Pedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/pedidos/total/1001",
+					"host": ["{{base_url}}"],
+					"path": ["pedidos", "total", "1001"]
+				}
+			}
+		},
+		{
+			"name": "Quantidade de Pedidos do Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/clientes/1/quantidade",
+					"host": ["{{base_url}}"],
+					"path": ["clientes", "1", "quantidade"]
+				}
+			}
+		},
+		{
+			"name": "Listar Pedidos do Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/clientes/1/pedidos",
+					"host": ["{{base_url}}"],
+					"path": ["clientes", "1", "pedidos"]
+				}
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		}
+	]
+}
